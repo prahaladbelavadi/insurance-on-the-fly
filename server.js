@@ -13,8 +13,7 @@ var express = require('express')
   });
 
  app.use(bodyParser());
- app.use('/images',express.static(__dirname + '/images'));
- app.use('/public',express.static(__dirname + '/public'));
+ // app.use('/public',express.static(__dirname + '/public'));
 
 
 

@@ -9,10 +9,6 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
 </head>
 
 <body ng-controller="MainCtrl">
@@ -74,47 +70,14 @@
   </div>
   <hr>
 
-  <div ng-repeat="player in players" class="player">
-    <div>
-        <span ng-bind="player.name"></span>
-    </div>
-    <div> playing
-        <span ng-bind="player.game"></span>
-    </div>
-	<div> age
-        <span ng-bind="player.age"></span>
-    </div>
-  </div>
 
-  <div>
-    <form name="addForm"
-          ng-submit="addplayer()">
-      <input type="text"
-             placeholder="Name"
-             ng-model="newplayer.name"
-             required>
-			 <input type="text"
-             placeholder="Game"
-             ng-model="newplayer.game"
-             required>
-			 <input type="number"
-             placeholder="Age"
-             ng-model="newplayer.age"
-             required>
-
-      <input type="submit"
-             value="Add"
-             ng-disabled="addForm.$invalid">
-    </form>
-
-  </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./app.js">
-
-</script>
 
 </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
 </html>

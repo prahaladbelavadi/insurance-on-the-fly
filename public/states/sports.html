@@ -1,0 +1,38 @@
+<div class="sports">
+
+      <div ng-repeat="player in players" class="player">
+        <div>
+            <span ng-bind="player.name"></span>
+        </div>
+        <div> playing
+            <span ng-bind="player.game"></span>
+        </div>
+    	<div> age
+            <span ng-bind="player.age"></span>
+        </div>
+      </div>
+
+      <div>
+        <form name="addForm"
+              ng-submit="addplayer()">
+          <input type="text"
+                 placeholder="Name"
+                 ng-model="newplayer.name"
+                 required>
+    			 <input type="text"
+                 placeholder="Game"
+                 ng-model="newplayer.game"
+                 required>
+    			 <input type="number"
+                 placeholder="Age"
+                 ng-model="newplayer.age"
+                 required>
+
+          <input type="submit"
+                 value="Add"
+                 ng-disabled="addForm.$invalid">
+        </form>
+
+      </div>
+
+</div>
