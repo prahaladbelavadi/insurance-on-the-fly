@@ -3,7 +3,7 @@ var SportsDAO = require('../sports').SportsDAO;
  /* The SessionHandler must be constructed with a connected db */
 function DemoHandler (db, multichain) {
     "use strict";
-var sports = new SportsDAO(db);
+    var sports = new SportsDAO(db);
         this.getAsset = function(req, res){
             "use strict";
 
@@ -14,8 +14,19 @@ var sports = new SportsDAO(db);
                 console.log(info);
                 return res.json(info);
             })
-        }
+        };
 
+        this.retrieveHelp = function(req, res){
+            "use strict";
+
+            multichain.help((err, help) => {
+                if(err){
+                    throw err;
+                }
+                console.log(help)
+                return res.json(help)
+            })
+        };
 
 	this.insertplayer = function(req, res) {
         "use strict";

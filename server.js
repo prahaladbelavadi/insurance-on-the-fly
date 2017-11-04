@@ -15,8 +15,6 @@ var express = require('express')
  app.use(bodyParser());
  app.use('/public',express.static(__dirname + '/public'));
 
-
-
 MongoClient.connect('mongodb://localhost:27017/demoapp', function(err, db) {
     "use strict";
     if(err) throw err;

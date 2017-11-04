@@ -1,5 +1,5 @@
 angular.module('sportsApp', ['ui.router'])
-    
+
     .controller('MainCtrl', function($scope, $http) {
       $scope.players = [];
       $scope.newplayer = {};
@@ -33,4 +33,12 @@ angular.module('sportsApp', ['ui.router'])
                   console.error('Error while fetching Assets');
               });
           }
+         $scope.fetchHelp = function(){
+             $http.post('/demo/retrieveHelp').then(function(response){
+                 $scope.helpbox = response.data;
+             },
+             function(err){
+                 console.error('Error while fetching Help data');
+             });
+         }
     });

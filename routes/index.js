@@ -6,4 +6,5 @@ var Demo = require('./demo')
 	app.post('/demo/getplayer', demo.getplayer);
 	app.get('/demo/getplayers', demo.getplayers);
 	app.post('/demo/getAsset',demo.getAsset);
+	app.post('/demo/retrieveHelp', demo.retrieveHelp);
 }
