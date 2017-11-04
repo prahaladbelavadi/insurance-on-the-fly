@@ -13,7 +13,7 @@ var express = require('express')
   });
 
  app.use(bodyParser());
- // app.use('/public',express.static(__dirname + '/public'));
+ app.use('/public',express.static(__dirname + '/public'));
 
 
 

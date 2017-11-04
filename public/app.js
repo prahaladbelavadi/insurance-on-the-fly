@@ -1,19 +1,5 @@
 angular.module('sportsApp', ['ui.router'])
-    .config(function($stateProvider,$urlRouterProvider){
-        $urlRouterProvider.otherwise('/public')
-        $stateProvider
-            //
-            .state('index',{
-                url:'/index',
-                templateUrl:'index.html'
-            })
-            .state('sports',{
-                url:'/sports',
-                templateUrl:'states/sports'
-            })
-
-    })
-
+    
     .controller('MainCtrl', function($scope, $http) {
       $scope.players = [];
       $scope.newplayer = {};
