@@ -1,5 +1,3 @@
-
-
 multichain.getInfo((err, info) => {
     if(err){
         throw err;
@@ -24,7 +22,6 @@ multichain.getAddresses((err, addresses) => {
     multichain.createMultiSig({nrequired: 2, keys: addresses}, (err, wallet) => {
         console.log(wallet)
     })
-
 })
 
 multichain.getRawTransaction({txid: someTxId}, (err, tx) => {
