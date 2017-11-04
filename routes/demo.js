@@ -11,7 +11,7 @@ function DemoHandler (db, multichain) {
                 if(err){
                     throw err;
                 }
-                console.log(info);
+                // console.log(info);
                 return res.json(info);
             })
         };
@@ -23,11 +23,33 @@ function DemoHandler (db, multichain) {
                 if(err){
                     throw err;
                 }
-                console.log(help)
+                // console.log(help)
                 return res.json(help)
             })
         };
+        this.retrieveAddresses = function(req, res){
+            "use strict";
 
+            multichain.getAddresses([{'verbose':true}], function(err,addresses)  {
+                if(err){
+                    throw err;
+                }
+                    console.log(addresses);
+                    return res.json(addresses)
+            });
+        };
+        this.retrieveNewAddress = function(req,res){
+            "use strict";
+
+            multichain.getnewaddress((err,response),function(){
+                if (err){
+                    throw err;
+                }
+                console.log(response);
+                return res.json(response)
+            })
+        };
+        // sports app
 	this.insertplayer = function(req, res) {
         "use strict";
 

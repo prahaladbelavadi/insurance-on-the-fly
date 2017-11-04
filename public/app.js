@@ -41,4 +41,20 @@ angular.module('sportsApp', ['ui.router'])
                  console.error('Error while fetching Help data');
              });
          }
+         $scope.fetchAddresses = function(){
+             $http.post('/demo/retrieveAddresses').then(function(response){
+                 $scope.addressesbox = response.data;
+             },
+             function(err){
+                 console.error('Error while fetching Addresses');
+             })
+         }
+         $scope.getNewAddress = function(){
+             $http.post('/demo/retrieveNewAddress').then(function(res){
+                 $scope.newAddressList = response.data;
+             }, (err)=>{
+                 console.error('Error while fetching new address');
+             })
+         }
+
     });
